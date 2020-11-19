@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import DrumPad from "./DrumPad";
-import FolkMe from "./Folkme";
 import "./App.css";
 
 const bankOne = [
@@ -269,15 +268,6 @@ export default class App extends Component {
             );
           })}
         </div>
-
-        <FolkMe
-          targetURL="https://github.com/completejavascript/drum-machine"
-          color="#fff"
-          backgroundColor="#35cac5"
-          position="right"
-          size="100px"
-          ariaLabel="View source on Github"
-        />
       </div>
     );
   }
