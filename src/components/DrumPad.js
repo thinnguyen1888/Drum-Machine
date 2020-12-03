@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 export default class DrumPad extends Component {
   constructor(props) {
@@ -44,13 +44,13 @@ export default class DrumPad extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.onKeyDown);
-    document.addEventListener('keyup', this.onKeyUp);
+    document.addEventListener("keydown", this.onKeyDown);
+    document.addEventListener("keyup", this.onKeyUp);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.onKeyDown);
-    document.removeEventListener('keyup', this.onKeyUp);
+    document.removeEventListener("keydown", this.onKeyDown);
+    document.removeEventListener("keyup", this.onKeyUp);
   }
 
   render() {
@@ -58,9 +58,14 @@ export default class DrumPad extends Component {
 
     return (
       <div className="drum-pad" id={padItem.id} onClick={this.onDrumPadClicked}>
-        <audio className="clip" id={padItem.keyTrigger} src={padItem.url} ref={this.audioHandler} />
+        <audio
+          className="clip"
+          id={padItem.keyTrigger}
+          src={padItem.url}
+          ref={this.audioHandler}
+        />
         {padItem.keyTrigger}
       </div>
-    )
+    );
   }
 }
